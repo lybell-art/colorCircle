@@ -1,7 +1,7 @@
 var slider;
 function setup()
 {
-	createCanvas(500,500);
+	createCanvas(windowWidth, windowHeight);
 	noStroke();
 	colorMode(HSB,360,100,100);
 	slider=createSlider(3,36,6);
@@ -11,6 +11,9 @@ function draw()
 {
 	background(255);
 	colorCircle(slider.value());
+}
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }
 function colorCircle(n)
 {
